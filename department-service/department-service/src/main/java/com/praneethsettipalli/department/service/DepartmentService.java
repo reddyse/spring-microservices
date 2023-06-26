@@ -15,12 +15,12 @@ public class DepartmentService {
     private DepartmentRepository departmentRepository;
 
     public Department saveDepartment(Department department) {
-        log("Inside saveDepartment of DepartmentService");
+        log.info("Inside saveDepartment of DepartmentService");
         return departmentRepository.save(department);
     }
 
     public Department findDepartmentById(Long departmentId) {
-        log("Inside findDepartment of DepartmentService");
+        log.info("Inside findDepartment of DepartmentService");
         return departmentRepository.findByDepartmentId(departmentId);
     }
 }
