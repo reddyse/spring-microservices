@@ -14,18 +14,18 @@ import static java.rmi.server.LogStream.log;
 @Slf4j
 public class DepartmentController {
 
-//    @Autowired
+    @Autowired
     private DepartmentService departmentService;
 
     @PostMapping("/")
     public Department saveDepartment(@RequestBody Department department){
-        log("Inside saveDepartment method of DepartmentController");
+        log.info("Inside saveDepartment method of DepartmentController");
         return departmentService.saveDepartment(department);
     }
 
     @GetMapping("/{id}")
     public Department findDepartmentbyId(@PathVariable("id") Long departmentId){
-        log("Inside findDepartment method of DepartmentController");
+        log.info("Inside findDepartment method of DepartmentController");
         return departmentService.findDepartmentById(departmentId);
     }
 
