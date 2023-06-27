@@ -10,8 +10,9 @@ The User microservice is responsible for managing user-related operations such a
 
 - Java 17
 - Springboot 3.1.1
-- H2 database
-- Eureka Server
+- Dependencies
+  - H2 database
+  - Eureka Server
 - RESTful API design
 
 ### Getting Started
