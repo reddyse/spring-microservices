@@ -14,7 +14,7 @@ import static java.rmi.server.LogStream.log;
 @Slf4j
 public class DepartmentController {
 
-//    @Autowired
+    @Autowired
     private DepartmentService departmentService;
 
     @PostMapping("/")
