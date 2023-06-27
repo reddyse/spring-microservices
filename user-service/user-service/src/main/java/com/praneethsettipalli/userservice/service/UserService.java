@@ -26,8 +26,9 @@ public class UserService {
         log.info("Inside getUserWithDepartment of UserService");
         ResponseTemplateVO vo = new ResponseTemplateVO();
         UserObject user = userRepository.findByUserId(userId);
+        /* Leveraging service registry and using name "DEPARTMENT-SERVICE" instead of hostname and port number  */
         Department department =
-                restTemplate.getForObject("http://localhost:9001/departments/"+user.getDepartmentId()
+                restTemplate.getForObject("http://DEPARTMENT-SERVICE/departments/"+user.getDepartmentId()
                         ,Department.class);
         vo.setUser(user);
         vo.setDepartment(department);
