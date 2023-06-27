@@ -8,8 +8,8 @@ The User microservice is responsible for managing user-related operations such a
 
 ### Technologies Used
 
-- Java
-- Springboot
+- Java 17
+- Springboot 3.1.1
 - H2 database
 - RESTful API design
 
