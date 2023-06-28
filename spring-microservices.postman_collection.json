@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "d0aebd5d-1a45-4af3-ae22-3b2ef91351f6",
+		"name": "spring-microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10110014"
+	},
+	"item": [
+		{
+			"name": "Create Department",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departmentName\":\"IT\",\r\n    \"departmentAddress\":\"3rd Cross, First Street\",\r\n    \"departmentCode\":\"IT-006\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9001/departments/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"departments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Praneeth\",\r\n    \"lastName\":\"Settipalli\",\r\n    \"email\":\"praneethsettipalli@gmail.com\",\r\n    \"departmentId\":\"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9005/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Department",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departmentName\":\"IT\",\r\n    \"departmentAddress\":\"3rd Cross, First Street\",\r\n    \"departmentCode\":\"IT-006\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9001/departments/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"departments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departmentName\":\"IT\",\r\n    \"departmentAddress\":\"3rd Cross, First Street\",\r\n    \"departmentCode\":\"IT-006\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9191/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
